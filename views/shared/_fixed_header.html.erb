@@ -4,13 +4,18 @@
 
   <div id="template_header_2025">
     <div id="template_header_content">
-      <a href="/"><div id="template_header_cog"></div></a>
-      <a href="/"><div id="template_header_rool_text"></div></a>
-      <a href="/">
-        <div id="template_header_rool_tagline">
-          Safeguarding the past, present and future of RISC OS for <strong>everyone</strong>
-        </div>
-      </a>
+      <div id="template_header_text_container">
+        <a href="/"><div id="template_header_rool_text"></div></a>
+        <a href="/">
+          <div id="template_header_rool_tagline">
+            Safeguarding the past, present and future of RISC OS for <strong>everyone</strong>
+          </div>
+        </a>
+      </div>
+
+      <div id="template_header_logo_container">
+        <a id="template_header_cog_link" href="/"><div id="template_header_cog"></div></a>
+      </div>
     </div>
   </div>
 
@@ -18,12 +23,19 @@
 
   <div id="template_navigation">
     <div id="template_navigation_content">
-      <div id="template_navigation_hub">
-        <%= hubssolib_account_link() unless @service_fault %><%# @service_fault -> See Hub TasksController#service %>
-      </div>
+      <nav id="template_navigation_main">
+        <a class="template_navigation" href="/news/">News</a>
+        <a class="template_navigation" href="/content/downloads">Downloads</a>
+        <a class="template_navigation" href="/tracker/">Bugs</a>
+        <a class="template_navigation" href="/bounty/">Bounties</a>
+        <a class="template_navigation" href="/forum/">Forums</a>
+        <a class="template_navigation" href="/wiki">Library</a>
 
-      <div id="template_navigation_main">
-        <a href="/news/" class="template_navigation">News</a><span class="template_navigation_divider"> | </span><a href="/content/downloads" class="template_navigation">Downloads</a><span class="template_navigation_divider"> | </span><a href="/tracker/" class="template_navigation">Bugs</a><span class="template_navigation_divider"> | </span><a href="/bounty/" class="template_navigation">Bounties</a><span class="template_navigation_divider"> | </span><a href="/forum/" class="template_navigation">Forums</a><span class="template_navigation_divider"> | </span><a href="/wiki" class="template_navigation">Library</a>
-      </div>
+        <div class="template_navigation" id="template_navigation_hub">
+          <%= hubssolib_account_link() unless @service_fault %><%# @service_fault -> See Hub TasksController#service %>
+        </div>
+      </nav>
     </div>
   </div>
+
+  <hr class="for_no_css_browers" style="display: none">
