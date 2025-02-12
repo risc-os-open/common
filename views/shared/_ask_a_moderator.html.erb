@@ -1,0 +1,5 @@
+<div class="moderation">
+  <strong>See something bad?</strong><br>
+  <%= mail_to('Ask a moderator', subject: "Issue at #{request.url}") %>!
+  More info <a href="/content/documents/guidelines">here</a>.
+</div>
