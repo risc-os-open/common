@@ -6,6 +6,10 @@
 
 <div id="template_footer_2025">
   <div id="template_footer_links_theme">
+    <% if Rails.env.development? %>
+      <span id="template_footer_environment">Development</span>
+      <span class="template_navigation_divider">&nbsp;|&nbsp;</span>
+    <% end %>
     <a class="template_navigation" href="/content/contact">Contact Us</a>
     <span class="template_navigation_divider">&nbsp;|&nbsp;</span>
     <a class="template_navigation" href="/content/about">About Us</a>
